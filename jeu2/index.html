@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta title="JEU 2">
+		<style>
+			@font-face{
+				font-family: "CooperBlackStd";
+				src: url("fonts/CooperBlackStd.otf");
+			}
+			
+			* {
+				overflow: hidden;
+			}
+			
+			html,body{
+				font-family: "CooperBlackStd";
+/*
+				width: 1024px;
+				height: 768px;
+*/
+				padding:0;
+				margin:0;
+/*				background-color: olivedrab;*/
+			}
+			
+			#canvas{
+				width: 1012px;
+				height: 756px;
+				padding: 0%;
+				border: 6px dotted #B1CF70;
+				cursor: crosshair;
+				
+			}
+       #txthowmany {
+         position: absolute;
+          top:50%;
+         margin: 0;
+         font-size: 40px;
+          text-align: center;
+         color: #FFF6C0;
+          width: 100%;
+/*          display: none;*/
+       }
+			#chrono{
+				position: absolute;
+				cursor: crosshair;
+				top: 20px;
+				right: 20px;}
+		</style>
+	</head>
+	
+	<body>
+<!--	<script src="chrono.js"></script>-->
+	<script src="config.js"></script>
+	<script src="utils.js"></script>
+	<script src="jeu.js"></script>
+	
+	<canvas id="canvas"></canvas>
+	<p id="txthowmany"></p>
+	
+
+<!--	<script>startGame();</script>-->
+	</body>
+</html>

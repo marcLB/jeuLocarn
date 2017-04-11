@@ -1,0 +1,593 @@
+
+html, body {
+    width:1024px;
+    height: 768px;
+    padding: 0;
+    margin: 0;
+   overflow: hidden;
+}
+
+/*animation*/
+.flash {
+    position: absolute;
+    width: 976px;
+    height: 520px;
+    margin-left: 24px;
+    margin-top: 24px;
+    background-color: #FFFFFF;
+    opacity: 0;
+    animation: animFlash 1s linear 1;
+}
+
+@keyframes animFlash {
+    0%{
+        opacity: 1;
+        background-position:0% 0%
+    }
+    100%{
+        opacity: 0;
+        background-position:0% 100%
+    }
+}
+
+.animEnd {
+    position: absolute;
+    width: 976px;
+    height: 520px;
+    margin-left: 24px;
+    margin-top: 24px;
+    background-color: #FFFFFF;
+    opacity: 0.8;
+    animation: animAnimEnd 2s linear 1;
+}
+
+@keyframes animAnimEnd {
+    0%{
+        opacity: 0;
+        background-position:0% 0%
+    }
+    100%{
+        opacity: 0.8;
+        background-position:0% 100%
+    }
+}
+
+#sky {
+    position: absolute;
+    width: 976px;
+    height: 520px;
+    margin-left: 24px;
+    margin-top: 24px;
+    background: linear-gradient(#ffb3b3,#e6e6ff,#b3d9ff,#cce6ff,#eeaa9e,#8079dd,#160d94);
+    background-size: 100% 1200%;
+    background-position:0% 100%;
+    animation: animSky 30s linear 1;
+
+}
+
+@keyframes animSky {
+    0%{background-position:0% 0%}
+    40%{background-position:0% 50%}
+    100%{background-position:0% 100%}
+}
+
+#sun {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 896px;
+    bottom: 0px;
+    background: linear-gradient(#f38f8f, #f5f3a3, #f2872f,#ff5c33);
+    background-size: 100% 1300%;
+    border-radius: 50px;
+    animation: animSun 20s linear 1;  
+}
+
+@keyframes animSun {
+    0%{
+        left: 896px;
+        bottom: 0px; 
+        background-size: 100% 1300%;
+        background-position:0% 0%;       }
+    5%{
+        background-position:0% 0%;    
+        }
+    20%{
+        background-size: 100% 1300%;
+        background-position:0% 30%;
+        box-shadow: 0 0 30px 10px #ffff99;
+    }
+    48%{
+        background-size: 100% 1300%;
+        background-position:0% 30%;  
+    }
+    50%{
+        left: 448px;
+        bottom: 400px;
+        background-size: 100% 1300%;
+        background-position:0% 30%;
+        box-shadow: 0 0 30px 30px #ffff99;
+    }
+    75%{
+        
+        background-position: 0% 40%;
+    }
+    85%{
+        background-size: 100% 100%;
+    }
+    100%{
+        left: 0px;
+        bottom: 0px;
+        background-size: 100% 100%;
+        background-position:0% 100%;
+    }
+}
+
+#moon {
+    position: absolute;
+    bottom: 400px;
+    right: 250px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; 
+/*    box-shadow: -15px 15px 0 0 #ffffff;*/
+    box-shadow: -15px 15px 15px 0 #ffffff;
+    animation: animMoon 30s linear 1;  
+}
+
+@keyframes animMoon {
+    
+    0% {
+        bottom: 20px;
+        right: 870px;
+        box-shadow: -15px 15px 0 0 #ffffff;
+    }
+    60% {
+        bottom: 20px;
+        right: 250px;
+        box-shadow: -15px 15px 0 0 #ffffff;
+    }
+    90%{
+        box-shadow: -15px 15px 10px 0 #ffffff;
+    }
+    100% { 
+        bottom: 400px;
+        right: 250px;
+        box-shadow: -15px 15px 13px 0 #ffffff;
+    }
+}
+
+.star {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 10px 5px #ffffff;
+    animation: animStar 30s linear 1;
+    opacity: 1;
+}
+
+#star-1 {
+    position: absolute;
+    bottom: 300px;
+    right: 850px;    
+}
+
+#star0 {
+    position: absolute;
+    bottom: 400px;
+    right: 700px;
+}
+
+#star1 {
+    position: absolute;
+    bottom: 350px;
+    right: 500px;
+}
+
+#star2 {
+    position: absolute;
+    bottom: 370px;
+    right: 210px;
+}
+
+@keyframes animStar {
+    0%{
+       background-color: none;
+        opacity: 0;
+    
+    }
+    85%{
+        opacity: 0;
+    }
+    95%{
+        background-color: #FFFFFF;
+        box-shadow: 0 0 10px 5px #ffffff;
+         opacity: 1;
+        
+    }
+    100%{
+        background-color: #FFFFFF;
+        box-shadow: 0 0 10px 5px #ffffff;
+         opacity: 1;
+    }
+}
+
+/*hills*/
+
+.hill{
+/*    display: none;*/
+    background: linear-gradient(#006666,#006600,#009900,#009973,#006666,#4d4dff);
+     background-size: 100% 1200%;
+    background-position:0% 100%;
+    animation: animHill 30s linear 1;
+}
+
+@keyframes animHill {
+    0%{background-position:0% 0%}
+    40%{background-position:0% 50%}
+    100%{background-position:0% 100%}
+}
+
+#hillLeft {
+    position: absolute;
+    bottom: -190px;
+    left: -30px;
+    width: 300px; 
+    height: 300px; 
+/*    background-color:  #006600; */
+/*    border-radius: 0% 50% 50% 50% / 60% 60% 0% 0%;*/
+    border-radius: 100px 120px;
+    animation: animHillLeft 30s linear 1;
+}
+
+@keyframes animHillLeft {
+    0%{background-position:0% 0%}
+    60%{
+         box-shadow: 0 0 0px 0px #ff8080;
+    }
+    65%{
+       
+        box-shadow: 0 0 15px 10px #ff8080;
+    }
+    75%{
+        
+        box-shadow: 0 0 30px 20px #ff8080;
+    }
+    100%{}
+}
+
+#hillCenter {
+    position: absolute;
+    bottom: -490px;
+    left: 160px;
+    width: 650px; 
+    height: 650px; 
+/*    background-color:  #006600; */
+/*    border-radius: 50% 50% 50% 50% / 60% 60% 0% 0%;*/
+    border-radius: 600px 700px 500px 500px;
+} 
+
+#hillRight {
+    position: absolute;
+    bottom: -50px;
+    right: 0px;
+    width: 300px; 
+    height: 180px; 
+/*    background-color:  #006600; */
+    border-radius: 50% 0% 50% 50% / 60% 60% 0% 0%;
+}
+
+/*tree*/
+
+.tree{
+/*    display: none;*/
+/*    background-color: #004d00;*/
+    background: linear-gradient( #2d862d,#004d00,#003300,#145252,#005580);
+    animation: animTree 20s linear 1;
+    background-size: 100% 1200%;
+    background-position:0% 100%;
+}
+
+@keyframes animTree {
+    0%{background-position:0% 0%}
+    70%{background-position:0% 50%}
+    100%{background-position:0% 100%}
+}
+
+#tree-11 {
+    position: absolute;
+    bottom:30px;
+    left: -10px;
+    width: 20px; 
+    height: 80px; 
+/*    background-color: #004d00; */
+    border-radius: 50% 50% 50% 50% / 70% 70% 30% 30%;
+}
+
+#tree-10 {
+    position: absolute;
+    bottom:40px;
+    left: 10px;
+    width: 20px; 
+    height: 80px; 
+/*    background-color: #004d00; */
+    border-radius: 50% 50% 50% 50% / 70% 70% 30% 30%;
+}
+
+#tree-9 {
+    position: absolute;
+    bottom:50px;
+    left: 30px;
+    width: 20px; 
+    height: 80px; 
+/*    background-color: #004d00; */
+    border-radius: 50% 50% 50% 50% / 70% 70% 30% 30%;
+}
+
+#tree-8 {
+    position: absolute;
+    bottom:55px;
+    left: 50px;
+    width: 20px; 
+    height: 80px; 
+/*    background-color: #004d00; */
+    border-radius: 50% 50% 50% 50% / 70% 70% 30% 30%;
+}
+
+#tree-7 {
+    position: absolute;
+    bottom:55px;
+    left: 70px;
+    width: 20px; 
+    height: 80px; 
+/*    background-color: #004d00; */
+    border-radius: 50% 50% 50% 50% / 70% 70% 30% 30%;
+}
+
+#tree-6 {
+    position: absolute;
+    bottom:55px;
+    left: 90px;
+    width: 20px; 
+    height: 80px; 
+/*    background-color: #004d00; */
+    border-radius: 50% 50% 50% 50% / 70% 70% 30% 30%;
+}
+
+#tree-5 {
+    position: absolute;
+    bottom:55px;
+    left: 110px;
+    width: 20px; 
+    height: 80px; 
+/*    background-color: #004d00; */
+    border-radius: 50% 50% 50% 50% / 70% 70% 30% 30%;
+}
+
+#tree-4 {
+    position: absolute;
+    bottom:50px;
+    left: 130px;
+    width: 20px; 
+    height: 80px; 
+/*    background-color: #004d00; */
+    border-radius: 50% 50% 50% 50% / 70% 70% 30% 30%;
+}
+
+#tree-3 {
+    position: absolute;
+    bottom:40px;
+    left: 150px;
+    width: 20px; 
+    height: 80px; 
+/*    background-color: #004d00; */
+    border-radius: 50% 50% 50% 50% / 70% 70% 30% 30%;
+}
+
+#tree-2 {
+    position: absolute;
+    bottom:30px;
+    left: 170px;
+    width: 20px; 
+    height: 80px; 
+/*    background-color: #004d00; */
+    border-radius: 50% 50% 50% 50% / 70% 70% 30% 30%;
+}
+
+#tree-1 {
+    position: absolute;
+    bottom:25px;
+    left: 200px;
+    width: 20px; 
+    height: 80px; 
+/*    background-color: #004d00; */
+    border-radius: 50% 50% 50% 50% / 70% 70% 30% 30%;
+}
+
+#tree0 {
+    position: absolute;
+    bottom:20px;
+    left: 218px;
+    width: 20px; 
+    height: 80px; 
+/*    background-color: #004d00; */
+    border-radius: 50% 50% 50% 50% / 70% 70% 30% 30%;
+}
+
+#tree1 {
+    position: absolute;
+    bottom:20px;
+    left: 235px;
+    width: 20px; 
+    height: 80px; 
+/*    background-color: #004d00; */
+    border-radius: 50% 50% 50% 50% / 70% 70% 30% 30%;
+}
+
+#tree2 {
+    position: absolute;
+    bottom:40px;
+    left: 270px;
+    width: 20px; 
+    height: 80px; 
+/*    background-color: #004d00; */
+    border-radius: 50% 50% 50% 50% / 70% 70% 30% 30%;
+}
+
+#tree3 {
+    position: absolute;
+    bottom:70px;
+    left: 400px;
+    width: 20px; 
+    height: 80px; 
+/*    background-color: #004d00; */
+    border-radius: 50% 50% 50% 50% / 70% 70% 30% 30%;
+}
+
+#tree4 {
+    position: absolute;
+    bottom:60px;
+    left: 730px;
+    width: 20px; 
+    height: 80px; 
+/*    background-color: #004d00; */
+    border-radius: 50% 50% 50% 50% / 70% 70% 30% 30%;
+}
+
+#tree5 {
+    position: absolute;
+    bottom:80px;
+    left: 850px;
+    width: 20px; 
+    height: 80px; 
+/*    background-color: #004d00; */
+    border-radius: 50% 50% 50% 50% / 70% 70% 30% 30%;
+}
+
+#hideBottom {
+    position: absolute;
+    background-color: olivedrab;
+    top: 544px;
+    height: 600px;
+    width: 1000px;
+    
+}
+
+#hideLeft{
+    position: absolute;
+    height: 768px;
+    width: 24px;
+    background-color: olivedrab;
+}
+
+/*reponses*/
+
+#chrono {
+    position: absolute;
+    left: 860px;
+    top: 30px;    
+}
+
+.picturePaper {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    margin-top: 560px;
+    background-color: #FFFFFF;
+    animation: animpicturePaper 0.7s linear 1;
+    transform-origin: 50% 50%;    
+}
+
+@keyframes animpicturePaper{
+  0% {
+    opacity:0;
+    transform:  rotate(-400deg) scaleX(0.00) scaleY(0.00) ;
+  }
+  100% {
+    opacity:1;
+    transform:  rotate(0deg) scaleX(1.00) scaleY(1.00) ;
+  }
+}
+
+#picturePaper1 {
+    margin-left: 24px;   
+}
+
+#picturePaper2 {
+    margin-left: 244px;
+}
+
+#picturePaper3 {
+    margin-left: 464px;
+}
+
+#picturePaper4 {
+    margin-left: 684px;
+}
+
+.btn_validate {
+    position: absolute;
+    width: 110px;
+    margin-left: 880px;
+    margin-top: 600px;
+    opacity: 1;
+    animation: animbtn_validate 0.5s linear 1;
+    transform-origin: 50% 50%;
+}
+
+@keyframes animbtn_validate{
+  0% {
+    opacity:0;
+    transform: scaleX(0.00) scaleY(0.00) ;
+  }
+  100% {
+    opacity:1;
+    transform: scaleX(1.00) scaleY(1.00) ;
+  }
+}
+
+.choice {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    opacity: 0;
+}
+
+.choiceAppear {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    opacity: 1;
+    animation: animChoiceAppear 4s linear 1;
+}
+
+@keyframes animChoiceAppear {
+    0%{
+        opacity: 0;   
+    }
+    100%{
+        opacity: 1;   
+    }
+}
+
+.select {
+   box-shadow: 0 0 30px 10px #ffff99; 
+}
+
+.select0 {
+   box-shadow: 0 0 0px 0px #ffff99; 
+}
+
+
+
+
+
+
+
+
+    
+	
+
+
+
